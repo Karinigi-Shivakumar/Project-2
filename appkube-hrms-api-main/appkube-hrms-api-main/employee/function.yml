@@ -1,0 +1,86 @@
+getEmployee:
+    handler: employee/getEmployee.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /employee/{id}
+              method: get
+              cors: true
+
+getEmployees:
+    handler: employee/getEmployees.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /employee
+              method: get
+              cors: true
+
+searchByName:
+    handler: employee/searchByName.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /searchByName
+              method: get
+              cors: true
+
+updatePersonalInfo:
+    handler: employee/updatePersonalInfo.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /employee/{id}
+              method: put
+              cors: true
+
+employeeTracker:
+    handler: employee/employeeTracker.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /employee/tracker
+              method: get
+              cors: true
+
+deleteEmployee:
+    handler: employee/deleteEmployee.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /employee/{id}
+              method: delete
+              cors: true
+inviteUser:
+    handler: employee/inviteUser.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /invite/{id}
+              method: get
+              cors: true
+scheduleInvite:
+    handler: employee/scheduleInvite.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /schedule
+              method: post
+              cors: true
+deleteInvite:
+    handler: employee/deleteInvite.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /deleteinvite
+              method: delete
+              cors: true
+
+updateInviteSchedule:
+    handler: employee/updateInviteSchedule.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /updateschedule
+              method: post
+              cors: true

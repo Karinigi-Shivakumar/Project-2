@@ -1,0 +1,30 @@
+service: hrms
+frameworkVersion: "3"
+
+useDotenv: true
+
+plugins:
+    - serverless-offline
+
+provider:
+    name: aws
+    stage: dev
+    timeout: 15
+    runtime: nodejs18.x
+    region: us-east-1
+    environment:
+        COGNITO_CLIENT_ID: ${env:COGNITO_CLIENT_ID}
+        COGNITO_POOL_ID: ${env:COGNITO_POOL_ID}
+        BUCKET_NAME: ${env:BUCKET_NAME}
+        BUCKET_FOLDER_NAME: ${env:BUCKET_FOLDER_NAME}
+
+functions:
+    - ${file(./auth/function.yml)}
+    - ${file(./employee/addEmployee/function.yml)}
+    - ${file(./employee/function.yml)}
+    - ${file(./department/function.yml)}
+    - ${file(./dashboard/function.yml)}
+    - ${file(./empType/function.yml)}
+    - ${file(./organization/function.yml)}
+    - ${file(./designation/function.yml)}
+    - ${file(./upload/function.yml)}

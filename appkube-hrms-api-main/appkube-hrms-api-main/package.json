@@ -1,0 +1,30 @@
+{
+	"name": "hrms",
+	"version": "1.0.0",
+	"description": "<!-- title: 'AWS Simple HTTP Endpoint example in NodeJS' description: 'This template demonstrates how to make a simple HTTP API with Node.js running on AWS Lambda and API Gateway using the Serverless Framework.' layout: Doc framework: v3 platform: AWS language: nodeJS authorLink: 'https://github.com/serverless' authorName: 'Serverless, inc.' authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4' -->",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@aws-sdk/client-cognito-identity-provider": "^3.515.0",
+		"@aws-sdk/client-s3": "^3.525.0",
+		"@aws-sdk/client-scheduler": "^3.533.0",
+		"@aws-sdk/client-secrets-manager": "^3.470.0",
+		"@middy/core": "^4.7.0",
+		"@middy/error-logger": "^4.7.0",
+		"@middy/http-cors": "^4.7.0",
+		"dotenv": "^16.4.5",
+		"generate-password": "^1.7.1",
+		"jsonwebtoken": "^9.0.2",
+		"jwks-rsa": "^3.1.0",
+		"pg": "^8.11.3",
+		"uuid": "^9.0.1",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"prettier": "3.2.5",
+		"serverless-offline": "^13.3.3"
+	}
+}

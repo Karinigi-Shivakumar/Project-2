@@ -1,0 +1,26 @@
+addEmptype:
+    handler: empType/addEmpType.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /empType
+              method: post
+              cors: true
+
+listEmptype:
+    handler: empType/listEmpType.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /empType
+              method: get
+              cors: true
+
+updateEmptype:
+    handler: empType/updateEmpType.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /empType
+              method: put
+              cors: true

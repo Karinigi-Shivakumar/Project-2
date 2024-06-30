@@ -1,0 +1,32 @@
+addPersonalInfo:
+    handler: employee/addEmployee/addPersonalInfo.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: employee/personalInfo
+              method: post
+              cors: true
+addProfessionalInfo:
+    handler: employee/addEmployee/addProfessionalInfo.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: employee/professionalInfo
+              method: put
+              cors: true
+addEquipmentdetailsInfo:
+    handler: employee/addEmployee/addEquipmentdetailsInfo.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: employee/equipmentInfo
+              method: put
+              cors: true
+addDocument:
+    handler: employee/addEmployee/addDocument.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: employee/document
+              method: put
+              cors: true

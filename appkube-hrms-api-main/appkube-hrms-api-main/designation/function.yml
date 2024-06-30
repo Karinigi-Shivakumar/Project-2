@@ -1,0 +1,26 @@
+listDesignation:
+    handler: designation/listDesignation.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /designation
+              method: get
+              cors: true
+
+addDesignation:
+    handler: designation/addDesignation.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /designation
+              method: post
+              cors: true
+
+updateDesignation:
+    handler: designation/updateDesignation.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /designation
+              method: put
+              cors: true

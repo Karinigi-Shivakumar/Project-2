@@ -1,0 +1,51 @@
+signup:
+    handler: auth/signup.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /signup
+              method: post
+              cors: true
+signin:
+    handler: auth/signin.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /signin
+              method: post
+              cors: true
+
+forgotPassword:
+    handler: auth/forgotPassword.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /forgotPassword
+              method: post
+              cors: true
+resetPassword:
+    handler: auth/resetPassword.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /resetPassword
+              method: post
+              cors: true
+
+changePassword:
+    handler: auth/changePassword.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /changePassword
+              method: post
+              cors: true
+
+refreshToken:
+    handler: auth/refreshToken.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /refreshToken
+              method: put
+              cors: true

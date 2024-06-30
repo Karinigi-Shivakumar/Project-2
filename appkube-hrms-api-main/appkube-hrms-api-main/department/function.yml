@@ -1,0 +1,26 @@
+addDepartment:
+    handler: department/addDepartment.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /department
+              method: post
+              cors: true
+
+listDepartment:
+    handler: department/listDepartment.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /department
+              method: get
+              cors: true
+
+updateDepartment:
+    handler: department/updateDepartment.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /department
+              method: put
+              cors: true

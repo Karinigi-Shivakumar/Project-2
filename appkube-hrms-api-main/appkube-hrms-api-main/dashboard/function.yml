@@ -1,0 +1,8 @@
+dashboardStats:
+    handler: dashboard/dashboardStats.handler
+    role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /dashboard/dashboardStats
+              method: get
+              cors: true
